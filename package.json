@@ -1,6 +1,6 @@
 {
   "name": "gulp-postcss-modules-sealine",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "FORK: A trivial solution for extracting CSS module data from PostCSS files.",
   "main": "lib/index.js",
   "scripts": {
