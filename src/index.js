@@ -24,7 +24,7 @@ export function generateHash(filename)
 
 export function generateScopedName(name, filename)
 {
-  return `${name}-SealineTravel`
+  return `${name}-SealineWidget`
 }
 
 export default function postcssModulesPlugin(plugins = [], config)
@@ -75,7 +75,7 @@ export default function postcssModulesPlugin(plugins = [], config)
       return callback(null, file)
 
     if (file.isStream())
-      return callback(new gutil.PluginError("gulp-postcss-modules", "Streams are not supported"))
+      return callback(new gutil.PluginError("gulp-postcss-modules-sealine", "Streams are not supported"))
 
     var self = this
 
@@ -92,7 +92,7 @@ export default function postcssModulesPlugin(plugins = [], config)
     (err, results) =>
     {
       if (err)
-        return callback(new gutil.PluginError("gulp-postcss-modules", err))
+        return callback(new gutil.PluginError("gulp-postcss-modules-sealine", err))
 
       results.forEach((resultFile) => resultFile && self.push(resultFile))
       return callback()
